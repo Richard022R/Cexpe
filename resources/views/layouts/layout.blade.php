@@ -32,6 +32,8 @@
           <li class="nav-item {{ setActivo('contacto') }}">
             <a class="nav-link" href="/contacto">Contacto</a>
           </li>
+          <li class="nav-item {{ setActivo('persona') }}">
+            <a class="nav-link" href="/personas">Personas</a></li>
         </ul>
       </div>
     </div>
