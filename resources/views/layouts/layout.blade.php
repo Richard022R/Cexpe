@@ -32,13 +32,13 @@
           <li class="nav-item {{ setActivo('contacto') }}">
             <a class="nav-link" href="/contacto">Contacto</a>
           </li>
-          <li class="nav-item {{ setActivo('persona') }}">
-            <a class="nav-link" href="/personas">Personas</a></li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/personas">Personas</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-
 
   <div class="container mt-5">
     @yield('content')
@@ -48,4 +48,3 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-

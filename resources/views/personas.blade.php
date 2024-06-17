@@ -5,6 +5,9 @@
 @section('content')
   <div class="container">
     <h1 class="text-center mt-5">Personas</h1>
+      <div style="margin: 20px;">
+        <a href="{{ route('persona.create') }}" style="text-decoration: none; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px;">Nuevo Persona</a>
+      </div>
     <div>
       @if($personas)
         @foreach($personas as $persona)
