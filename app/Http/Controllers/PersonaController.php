@@ -30,4 +30,23 @@ class PersonaController extends Controller
  
         return redirect()->route('personas.index');
      }
+
+     public function edit(Persona $persona)
+    {
+        return view('edit', [
+            'persona' => $persona,
+        ]);
+    }
+
+    public function update(Persona $persona, CreatePersonaRequest $request)
+    {
+        $persona->update($request->validated());
+        return redirect()->route('persona.show', $persona);
+    }
+
+    public function destroy(Persona $persona)
+    {
+        $persona->delete();
+        return redirect()->route('personas.index');
+    }
 }
