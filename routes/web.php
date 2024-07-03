@@ -7,6 +7,7 @@ Route::view('programas','programas')->name('programas');
 Route::get('talleres','App\Http\Controllers\Servicios2Controller@index')->name('talleres');
 Route::view('asesoramiento','asesoramiento')->name('asesoramiento');
 Route::view('contacto','contacto')->name('contacto');
+Route::post('contacto','App\Http\Controllers\ContactoController@store');
 Route::get('personas','App\Http\Controllers\PersonaController@index')->name('personas.index');
 Route::get('personas/crear', 'App\Http\Controllers\PersonaController@create')->name('persona.create');
 Route::get('personas/{persona}/editar','App\Http\Controllers\PersonaController@edit')->name('personas.edit');
