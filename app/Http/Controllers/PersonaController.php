@@ -28,7 +28,7 @@ class PersonaController extends Controller
 
         Persona::create($request->validated());
  
-        return redirect()->route('personas.index');
+        return redirect()->route('personas.index')->with('estado','La persona fue creada correctamente');
      }
 
      public function edit(Persona $persona)
@@ -41,12 +41,12 @@ class PersonaController extends Controller
     public function update(Persona $persona, CreatePersonaRequest $request)
     {
         $persona->update($request->validated());
-        return redirect()->route('persona.show', $persona);
+        return redirect()->route('personas.show', $persona)->with('estado','La persona fue actualizada correctamente');
     }
 
     public function destroy(Persona $persona)
     {
         $persona->delete();
-        return redirect()->route('personas.index');
+        return redirect()->route('personas.index')->with('estado','La persona fue eliminada correctamente');
     }
 }

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('title', 'Contacto')
 
@@ -15,6 +15,9 @@
                         <th scope="col" colspan="2">CONTACTO</th>
                     </tr>
                 </thead>
+                @if(session('estado'))
+                {{session('estado')}}
+                @else
                 <form action="{{ route('contacto') }}" method="post">
                     @csrf {{-- Token para verificar que el formulario es seguro --}}
                     <tbody>
@@ -54,6 +57,7 @@
                         </tr>
                     </tbody>
                 </form>
+                @endif
             </table>
         </td>
     </tr>

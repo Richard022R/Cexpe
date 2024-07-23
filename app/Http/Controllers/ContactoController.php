@@ -21,7 +21,6 @@ class ContactoController extends Controller
             'mensaje.required' => 'Ingresa tu MENSAJE',
         ]);
         Mail::to('ricardomcm022@gmail.com')->send(new MensajeRecibido($mensaje));
-        return new MensajeRecibido($mensaje);
-        //return 'Mensaje enviado';
+        return back()->with('estado','Gracias por ponerte en contacto, te responderemos a la brevedad posible');
     }
 }

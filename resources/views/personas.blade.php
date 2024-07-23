@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('title', 'Personas')
 
@@ -6,7 +6,7 @@
   <div class="container">
     <h1 class="text-center mt-5">Personas</h1>
       <div style="margin: 20px;">
-        <a href="{{ route('persona.create') }}" style="text-decoration: none; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px;">Nuevo Persona</a>
+        <a href="{{ route('personas.create') }}" style="text-decoration: none; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px;">Nuevo Persona</a>
       </div>
     <div>
       @if($personas)
@@ -15,7 +15,7 @@
             <div class="card mb-4">
               <div class="card-body text-center">
                 <h5 class="card-title">{{ $persona->cPerNombre }} {{ $persona->cPerApellido }}</h5>
-                <a href="{{ route('persona.show', $persona->nPerCodigo) }}" class="btn btn-primary">Ver detalles</a>
+                <a href="{{ route('personas.show', $persona->nPerCodigo) }}" class="btn btn-primary">Ver detalles</a>
               </div>
             </div>
           </div>
